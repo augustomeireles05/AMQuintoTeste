@@ -17,7 +17,7 @@
     <div class="p-3">
         <div class="container d-flex justify-content-center">
             <div class="col-12 col-md-8 col-lg-4 d-flex justify-content-center shadow shadow-container mt-5 mb-5 p-3 bg-secondary">
-                <form class="col-12 col-md-6 col-lg-10 px-2" method="post" action="PrimeiroServlets"> <!--  MUITO IMPORTANTE: METHOD E ACTION -->
+                <form class="col-12 col-md-6 col-lg-10 px-2" method="post" action="SegundoServlet"> <!--  MUITO IMPORTANTE: METHOD E ACTION -->
                     <div class="text-center mb-4">
                         <h3 class="font-title-recuperarsenha">Informe valores para A, B e C:</h3>
                         
@@ -29,7 +29,7 @@
                     
                     <div class="col-12 col-md-12 col-lg-12 w-100">
                         <label class="label" for="name">Valor B:</label>
-                        <input class="w-100 mb-4" type="text" name="valB"/>
+                        <input class="w-100 mb-2" type="text" name="valB"/>
                     </div>
                     
                     <div class="col-12 col-md-12 col-lg-12 w-100">
