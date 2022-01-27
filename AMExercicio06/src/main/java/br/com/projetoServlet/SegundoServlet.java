@@ -49,7 +49,7 @@ public class SegundoServlet extends HttpServlet {
 		//INÍCIO DA LÓGICA PARA CONDIÇÃO DE EXISTÊNCIA DE UM TRIÂNGULO:
 		
 		if (valA <= 0 && valB <= 0 && valC <= 0) {
-			response.getWriter().println("ATENÇÃO! Informe ao menos um valor positivo (MAIOR QUE ZERO)");
+			response.getWriter().println("ATENÇÃO! Informe ao menos três valores positivo para verificação da Existência de Triângulos!");
 		} else if (valA < valB + valC && valB < valA + valC && valC < valA + valB) { //Condição de Existência do triângulo
 			if (valA == valB && valB == valC) {
 				response.getWriter().println("OS VALORES FORMAM UM TRIÂNGULO EQUILÁTERO!");
@@ -68,6 +68,44 @@ public class SegundoServlet extends HttpServlet {
 		// TESTE 2 2 2 - TRIÂNGULO EQUILÁTERO
 		
 		
+		//INÍCIO DA LÓGICA PARA CONDIÇÃO DE DOIS LADOS IGUAIS E UM ZERO (ÁREA DO QUADRADO e RETANGULO).
+		
+		if (valA == 0 && valB > 0 && valC > 0 && (valB == valC)) {
+			area = valB * valC;
+			response.getWriter().printf("Os valores de B e C podem ser lados de um QUADRADO e possui área = %.2f m². \n", area);
+		} else if (valB == 0 && valC > 0 && valA > 0 && (valA == valC)) {
+			area = valA * valC;
+			response.getWriter().printf("Os valores de A e C podem ser lados de um QUADRADO e possui área = %.2f m². \n", area);
+		} else if (valC == 0 && valC > 0 && valB > 0 && (valA == valB)) {
+			area = valA * valB;
+			response.getWriter().printf("Os valores de A e B podem ser lados de um QUADRADO e possui área = %.2f m². \n", area);
+		} else if (valA == 0 && valB != valC) {
+			area = valB * valC;
+			response.getWriter().printf("Os valores de B e C podem ser lados de um RETANGULO e possui área = %.2f m². \n", area);
+			
+		} else if (valB == 0 && valA != valC) {
+			area = valA * valC;
+			response.getWriter().printf("Os valores de A e C podem ser lados de um RETANGULO e possui área = %.2f m². \n", area);
+			
+		} else if (valC == 0 && valA != valB) {
+			area = valA * valB;
+			response.getWriter().printf("Os valores de A e B podem ser lados de um RETANGULO e possui área = %.2f m². \n", area);
+			
+		} 
+		
+		//INÍCIO DA LÓGICA PARA CONDIÇÃO DE UMA RETA!
+		
+		if (valA == 0 && valB == 0 && valC > 0) {
+			double reta = valC;
+			response.getWriter().printf("Os valores inputados representam uma reta. VALOR de C = %.2f m.", reta);
+		} else if (valB == 0 && valC == 0 && valA > 0) {
+			double reta = valA;
+			response.getWriter().printf("Os valores inputados representam uma reta. VALOR de A = %.2f m.", reta);
+		} else if (valA == 0 && valC == 0 && valB > 0) {
+			double reta = valB;
+			response.getWriter().printf("Os valores inputados representam uma reta. VALOR de B = %.2f m.", reta);
+		}
+	
 		
 		
 	}
